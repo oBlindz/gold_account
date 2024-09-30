@@ -22,7 +22,7 @@ body, html {
 .container > h1 {
   font-size: 1.6rem;
 }
-.container > h1 > span {
+.container > h1 > a {
   color: gold;
   font-weight: bolder;
   text-decoration: underline;
