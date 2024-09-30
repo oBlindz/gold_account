@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora do valor de contas | yblindz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cotação oficial: <span>R$5,12</span></h1>
+    <p>A cotação oficial é contabilizada a partir do menor valor possível de comprar <strong>100 golds</strong> de forma oficial, sem terceiros.</p>
+    <div class="form">
+      <label for="gold">Quantos golds a conta têm:</label>
+      <input type="number" id="gold" placeholder="Insira quantos golds sua conta têm" >
+
+      <label for="cotacao">Preço do gold: </label>
+      <input type="number" name="cotacao" id="cotacao" placeholder="Insira o valor que cada 100 golds vale">
+    </div>
+    <button onclick="calcular()">Calcular</button>
+  </div>
+</body>
+<script>
+  function calcular(){
+    const goldTotal = window.document.getElementById("gold");
+    const valorTotal = window.document.getElementById("cotacao")
+    const gold = goldTotal.value
+    const valor = valorTotal.value
+
+    console.log(
+      (gold / 100) * valor
+    )
+
+  }
+</script>
+</html>

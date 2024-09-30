@@ -1,0 +1,1 @@
+# Este projeto têm o objetivo de auxiliar jogadores de Standoff 2 a saberem quanto suas contas valem
