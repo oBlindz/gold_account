@@ -17,19 +17,21 @@
       <label for="cotacao">Preço do gold: </label>
       <input type="number" name="cotacao" id="cotacao" placeholder="Insira o valor que cada 100 golds vale" required value="7.07">
     </div>
+    <p id="resultContainer">Sua conta vale: <strong>R$<span id="result"></span></strong></p>
     <button onclick="calcular()">Calcular</button>
   </div>
 </body>
 <script>
   function calcular(){
     const goldTotal = window.document.getElementById("gold");
-    const valorTotal = window.document.getElementById("cotacao")
+    const valorTotal = window.document.getElementById("cotacao");
+    const result = window.document.getElementById("result");
+
     const gold = goldTotal.value
     const valor = valorTotal.value
-
-    console.log(
-      ((gold * .80) / 100) * valor
-    )
+    const calcResult = ((gold * .80) / 100) * valor
+    
+    result.innerHTML = calcResult
   }
 </script>
 </html>
